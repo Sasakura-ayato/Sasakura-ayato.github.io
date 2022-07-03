@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>しゃしゃ</title>
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
+</head>
+<body>
+  
+    <script>
+        function copy() {
+            var copyTarget = document.getElementById("discordac");
+            copyTarget.select();
+            document.execCommand("Copy");
+            alert("コピーできました！ : " + copyTarget.value);
+        }
+    </script>  
+
+    <div class="account">
+        <div class="user">
+            <span class="user-image"></span>
+            <div class="user-text">
+                <p class="user-name">佐桜 彩斗</p>
+                <p class="user-id">@ayato_sasakura</p>
+            </div>
+        </div>
+    <ul class="menu">
+        <li class="menu-item">
+            <a href="" class="button-01">
+                <b>【基本情報】</b><br>
+                2005年5月30日 / 山口県 生まれ <br>
+                2021年4月 / 県立高校入学
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="" class="button-01">
+                <b>【趣味・特技】</b><br>
+                趣味：ライトノベル・アニメを見ること・ラジオ（地上波・ネット問わず）・ポッドキャスト・アニメ <br>
+                特技：１日に長い時間眠れる（？）
+            </a>
+        </li>
+    </ul>
+    </div> 
+
+    <div class="account">
+        <div class="user">
+            <span class="user-image"></span>
+            <div class="user-text">
+                <p class="user-name">Contact</h2>
+                <p class="user-id">
+                    各種 SNS アカウントなどの情報です。
+                </p>
+            </div>
+        </div>
+        <ul class="menu">
+            <li class="menu-item">
+                <a href="https://twitter.com/ayato_sasakura" class="button-01 tw">@ayato_sasakura</a>
+            </li>
+            <li class="menu-item">
+                <a href="https://github.com/Sasakura-ayato" class="button-01 gh">Sasakura-ayato</a>
+            </li>
+            <li class="menu-item">
+                <a href="https://scrapbox.io/sasapublic" class="button-01 sb">ScrapBox</a>
+            </li>
+            <li class="menu-item">
+                <button class="button-01 dc" id="discordac" value="しゃ#2639">しゃ#2639</a>
+            </li>
+            <li class="menu-item">
+                <a href="./articles/" class="button-01 rd">しゃしゃ（読み物）</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="account">
+        <div class="user">
+            <span class="user-image"></span>
+            <div class="user-text">
+                <p class="user-name">Organization</h2>
+                <p class="user-id">
+                    参加している団体の一覧です。
+                </p>
+            </div>
+        </div>
+        <ul class="menu">
+            <li class="menu-item-round">
+                <a href="https://github.com/brain-hackers/README" class="button-01 gh">Brain-Hackers</a>
+            </li>
+            <li class="menu-item">
+                <a href="https://brain.fandom.com/ja/wiki/Brain_Wiki" class="button-01 sb">Brain Wiki (Administrator)</a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
+
