@@ -5,19 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>しゃしゃ</title>
+    <!-- ユーザー定義 スタイルシート -->
     <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="stylesheet" href="./assets/css/common.css">
+
+    <!-- JQuery Snowfall (限界やちゃん) スクリプト-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/external-lib/snowfall.jquery.min.js"></script>
+    <script type="text/javascript">
+        function fallsnowfall(){
+            $(document).snowfall({
+              flakeCount:120,
+                maxSpeed:2,
+                minSpeed:1,
+                maxSize:70,
+                minSize:4,
+                  round:false,
+                 shadow:false,
+                  image:'/assets/images/genkaiya-chan.svg',
+                
+           });
+        };</script>
 </head>
 <body>
-  
-    <script>
-        function copy() {
-            var copyTarget = document.getElementById("discordac");
-            copyTarget.select();
-            document.execCommand("Copy");
-            alert("コピーできました！ : " + copyTarget.value);
-        }
-    </script>  
+
+    <button onclick="fallsnowfall()">限界やちゃんを落とす</button>
 
     <div class="account">
         <div class="user">
@@ -38,7 +50,7 @@
         <li class="menu-item">
             <a href="" class="button-01">
                 <b>【趣味・特技】</b><br>
-                趣味：ライトノベル・アニメを見ること・ラジオ（地上波・ネット問わず）・ポッドキャスト・アニメ <br>
+                趣味：ライトノベル・アニメを見ること・ラジオ（地上波・ネット問わず）・ポッドキャスト<br>
                 特技：１日に長い時間眠れる（？）
             </a>
         </li>
