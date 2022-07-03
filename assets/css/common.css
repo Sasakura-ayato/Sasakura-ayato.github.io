@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP');
-
 * {
   box-sizing: border-box; }
 
@@ -7,7 +5,7 @@ body {
   background: #333;
   color: #333;
   padding-bottom: 80px;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'TBUDゴシック SL' ,'Noto Sans JP' , 'BIZ UDPゴシック', 'MS ゴシック', 'Hiragino Kaku Gothic Pro';
   text-align: left; }
   body.page-animation {
     background: #b6d0db; }
