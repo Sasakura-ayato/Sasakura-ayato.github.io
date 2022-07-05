@@ -12,6 +12,12 @@ body {
   body.page-etc {
     background: #7ca9bd; }
 
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 ul {
   padding: 0;
   margin: 0; }
@@ -40,9 +46,7 @@ button {
   text-align: left;
   cursor: pointer; }
 
-/**
- *
- */
+
 .content {
   width: 100%;
   max-width: 800px;

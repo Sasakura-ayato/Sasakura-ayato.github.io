@@ -8,30 +8,9 @@
     <!-- ユーザー定義 スタイルシート -->
     <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="stylesheet" href="./assets/css/common.css">
-
-    <!-- JQuery Snowfall (限界やちゃん) スクリプト-->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script type="text/javascript" src="./assets/external-lib/snowfall.jquery.min.js"></script>
-    <script type="text/javascript">
-        var snowfallToggle = False;
-        function fallsnowfall(){
-            $(document).snowfall({
-              flakeCount:120,
-                maxSpeed:2,
-                minSpeed:1,
-                maxSize:70,
-                minSize:4,
-                  round:false,
-                 shadow:false,
-                  image:'/assets/images/genkaiya-chan.svg',
-                
-           });
-        };</script>
 </head>
 <body>
-
-    <button onclick="fallsnowfall()">限界やちゃんを落とす</button>
-
+    <canvas></canvas>
     <div class="account">
         <div class="user">
             <span class="user-image"></span>
@@ -110,6 +89,9 @@
         </ul>
     </div>
 
+        
+    <!-- Genkaiya-chan-flakes -->
+    <script src="./assets/external-lib/genkaiya-chan-flakes.js"></script>
 </body>
 </html>
 
