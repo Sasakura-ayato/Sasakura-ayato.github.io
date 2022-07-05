@@ -22,7 +22,7 @@ Note:
 
 const config = {
 	density: 3,
-  // n: 10000,
+  n: 20,
 
   dyMin: 10,
   dyMax: 40,
@@ -38,7 +38,9 @@ const config = {
   profiling: false,
 }
 
-const genkaiyaWebp = `data:image/webp;base64,UklGRh4OAABXRUJQVlA4WAoAAAAQAAAA/wEA/wEAVlA4TKkNAAAv/8F/EB8gEEiiXn8NAUHRavcJ
+
+const genkaiyaWebp = `data:image/webp;base64,
+UklGRh4OAABXRUJQVlA4WAoAAAAQAAAA/wEA/wEAVlA4TKkNAAAv/8F/EB8gEEiiXn8NAUHRavcJ
 CIpWu2/+A/BXgR/3/+xYdm2LXAtcL+vJTqgVXC+fAvglsRKYHLbS14tzTlUr2IQ08h8ghhVmrWoF
 sTzJXrFe1nByoYoGg8F4cWlZSxH9n4Di/1Hflr/vddXlUV0cUF4a+/LCGkt1XS328rK6g+r3uu3S
 AGSA+qoaQMt4YS2wiNzhqgCeIgLlNTWA7KGKqsFa5UFbBuqoWhtlFpYDkqizoCwjlBE1HKfXsor1
@@ -118,11 +120,11 @@ let frames = 0;
 let flakes = [];
 
 function randRange(min, max) {
-	return Math.random() * (max - min) + min;
+  return Math.random() * (max - min) + min;
 }
 
 function init() {
-	width = body.offsetWidth;
+  width = body.offsetWidth;
   height = body.offsetHeight;
   ratio = window.devicePixelRatio;
   
@@ -136,8 +138,8 @@ function init() {
   flakes = [];
 
   for (let i = 0; i < n; i++) {
-  	flakes.push({
-    	x: Math.random() * (width + 40) - 20,
+    flakes.push({
+      x: Math.random() * (width + 40) - 20,
       y: Math.random() * (height + 40) - 40, 
       dy: randRange(config.dyMin, config.dyMax),
       r: randRange(config.rMin, config.rMax),
@@ -152,26 +154,26 @@ init();
 new ResizeObserver(init).observe(body);
 
 function draw() {
-	const now = performance.now();
+  const now = performance.now();
   let elapsed = (now - last) / 1000;
   let elapsedProf = (now - lastProf) / 1000;
   if (elapsed > 0.1) {
-  	elapsed = 0.1;
+    elapsed = 0.1;
   }
   last = now;
   
   if (elapsedProf > 1 && config.profiling) {
-  	console.log(`FPS: ${frames / elapsedProf}`);
+    console.log(`FPS: ${frames / elapsedProf}`);
     frames = 0;
     lastProf = now;
   }
   
   ctx.clearRect(0, 0, width, height);
   flakes.forEach(f => {
-  	ctx.drawImage(g, f.x + f.r * Math.sin(f.theta), f.y, f.size, f.size);
+    ctx.drawImage(g, f.x + f.r * Math.sin(f.theta), f.y, f.size, f.size);
     Object.assign(f, {
-      	y: f.y > height ? -f.size : f.y + f.dy * elapsed,
-      	theta: f.theta + f.omega * elapsed,
+        y: f.y > height ? -f.size : f.y + f.dy * elapsed,
+        theta: f.theta + f.omega * elapsed,
     });
   });
   
@@ -180,3 +182,4 @@ function draw() {
 }
 
 requestAnimationFrame(draw);
+
