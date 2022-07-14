@@ -21,8 +21,8 @@ Note:
 */
 
 const config = {
-	density: 3,
-  n: 20,
+	density: 2,
+  // n: 20,
 
   dyMin: 10,
   dyMax: 40,
